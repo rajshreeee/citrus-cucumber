@@ -29,6 +29,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = { "pretty", "com.consol.citrus.cucumber.CitrusReporter" } )
+        plugin = { "pretty", "com.consol.citrus.cucumber.CitrusReporter" }, features = "classpath:todo" )
 public class TodoFeatureIT{
 }

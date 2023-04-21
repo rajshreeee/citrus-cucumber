@@ -28,18 +28,20 @@ dependencies {
 	// citrus
 	testImplementation("com.consol.citrus:citrus-base:${citrusVersion}")
 	testImplementation("com.consol.citrus:citrus-endpoint-catalog:${citrusVersion}")
-	testImplementation("com.consol.citrus:citrus-testng:${citrusVersion}")
+
 	testImplementation("com.consol.citrus:citrus-spring:${citrusVersion}")
 	testImplementation("com.consol.citrus:citrus-junit:${citrusVersion}")
 	testImplementation("com.consol.citrus:citrus-cucumber:${citrusVersion}")
+	testImplementation("junit:junit:4.13.2")
 
 	// cucumber
 	testImplementation("io.cucumber:cucumber-junit:${cucumberVersion}")
 	testImplementation("io.cucumber:cucumber-spring:${cucumberVersion}")
+	testImplementation("io.cucumber:cucumber-java:${cucumberVersion}")
 
 }
 
 tasks.withType<Test> {
-	useJUnitPlatform()
+	useJUnit()
 }
 
