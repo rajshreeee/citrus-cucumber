@@ -17,18 +17,28 @@
 package com.example.citrus;
 
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.cucumber.java.Before;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * @author Christoph Deppisch
  */
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = { "pretty", "com.consol.citrus.cucumber.CitrusReporter" }, features = "classpath:todo" )
-public class TodoFeatureIT{
+public class TodoFeatureIT extends AbstractTestNGCucumberTests {
+
+    @BeforeClass
+    public void setUp() {
+        System.out.println("initializer");
+    }
+
+    @Test
+    public void test() {
+        System.out.println("test");
+    }
 }

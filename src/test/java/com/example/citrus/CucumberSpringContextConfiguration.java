@@ -6,11 +6,12 @@ import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 @CucumberContextConfiguration
 @SpringBootTest()
 @ContextConfiguration(classes = CitrusApplication.class, loader = SpringBootContextLoader.class)
-public class CucumberSpringContextConfiguration {
+public class CucumberSpringContextConfiguration{
 
 
     /**
