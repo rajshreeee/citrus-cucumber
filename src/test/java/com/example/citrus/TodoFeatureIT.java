@@ -29,16 +29,10 @@ import org.testng.annotations.Test;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = { "pretty", "com.consol.citrus.cucumber.CitrusReporter" }, features = "classpath:todo" )
+    plugin = { "pretty", "com.consol.citrus.cucumber.CitrusReporter" }, features = "classpath:todo" )
 public class TodoFeatureIT extends AbstractTestNGCucumberTests {
 
-    @BeforeClass
-    public void setUp() {
-        System.out.println("initializer");
-    }
-
-    @Test
-    public void test() {
-        System.out.println("test");
-    }
+//    @Test
+//    void contextLoads() {
+//    }
 }

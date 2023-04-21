@@ -43,5 +43,6 @@ dependencies {
 
 tasks.withType<Test> {
 	useTestNG()
+	setScanForTestClasses(false)
 }
 
